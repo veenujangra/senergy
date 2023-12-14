@@ -149,7 +149,12 @@
     display: flex;
     justify-content: end;
   }
-
+  .home_strategy_media_3 {
+    :nth-child(1),
+    :nth-child(2) {
+      opacity: 0;
+    }
+  }
   .home_strategy_media_1,
   .home_strategy_media_2,
   .home_strategy_media_3 {
