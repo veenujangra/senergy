@@ -7,6 +7,7 @@ import Accordion from '../animations/accordion'
 import gsap from 'gsap'
 import Lenis from '@studio-freight/lenis'
 import Metal from '../animations/metal'
+import HeroAnimation from '../animations/heroAnimation'
 
 export default class Page {
   constructor(options) {
@@ -18,6 +19,7 @@ export default class Page {
       image: '[data-animation = image]',
       accordion: '[data-accordion = wrapper]',
       metal: '[data-metal]',
+      heroAnimation: '[data-heroAnimation-wrapper]',
     }
     this.createSmoothScroll()
   }
@@ -85,6 +87,11 @@ export default class Page {
       return new Metal({ element })
     })
     this.animations.push([...this.animationMetal])
+
+    this.animationHeroMedia = map(this.elements.heroAnimation, (element) => {
+      return new HeroAnimation({ element })
+    })
+    this.animations.push([...this.animationHeroMedia])
   }
 
   show(animation) {
