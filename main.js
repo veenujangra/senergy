@@ -9,8 +9,8 @@ class App {
     this.addEventListeners()
   }
 
-  async createPage() {
-    this.fontLoaded = await document.fonts.ready
+  createPage() {
+    // this.fontLoaded = await document.fonts.ready
 
     document.documentElement.classList.add('loaded')
 
