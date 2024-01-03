@@ -21,7 +21,6 @@ export default class Page {
       metal: '[data-metal]',
       heroAnimation: '[data-heroAnimation-wrapper]',
     }
-    // this.createSmoothScroll()
   }
 
   create() {
@@ -114,14 +113,15 @@ export default class Page {
         )
       }
       this.animateIn.call((_) => {
-        this.addEventListeners()
+        // this.createSmoothScroll()
+        // this.addEventListeners()
         resolve()
       })
     })
   }
 
   addEventListeners() {
-    window.addEventListener('scroll', this.onScroll.bind(this))
+    // window.addEventListener('scroll', this.onScroll.bind(this))
   }
 
   onScroll() {
