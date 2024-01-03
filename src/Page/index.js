@@ -21,7 +21,7 @@ export default class Page {
       metal: '[data-metal]',
       heroAnimation: '[data-heroAnimation-wrapper]',
     }
-    this.createSmoothScroll()
+    // this.createSmoothScroll()
   }
 
   create() {
