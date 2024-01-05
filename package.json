@@ -13,6 +13,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "host": "vite --host",
     "changeset": "changeset"
   },
   "devDependencies": {

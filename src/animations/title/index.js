@@ -33,6 +33,7 @@ export default class Title extends Animation {
   setProperties() {
     gsap.set(this.text.lines, {
       autoAlpha: 0,
+      y: 20,
     })
   }
 
@@ -45,12 +46,12 @@ export default class Title extends Animation {
       },
     })
 
-    this.tl.fromTo(
+    this.tl.to(
       this.text.lines,
-      {
-        autoAlpha: 0,
-        y: 20,
-      },
+      // {
+      //   autoAlpha: 0,
+      //   y: 20,
+      // },
       {
         autoAlpha: 1,
         y: 0,
