@@ -50,7 +50,7 @@ export default class Accordion {
       onStart: () => {
         this.resetAccordion()
         this.accordionItems[index].status = true
-        this.accordionItems[index].header.setAttribute('aria-open', 'true')
+        this.accordionItems[index].header.setAttribute('aria-expanded', 'true')
       },
     })
 
@@ -68,7 +68,7 @@ export default class Accordion {
 
   accordionClose(body, index) {
     this.tl = gsap.timeline({
-      onStart: () => ((this.accordionItems[index].status = false), this.accordionItems[index].header.setAttribute('aria-open', 'false')),
+      onStart: () => ((this.accordionItems[index].status = false), this.accordionItems[index].header.setAttribute('aria-expanded', 'false')),
     })
 
     this.tl.to(body, {
